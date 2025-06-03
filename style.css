@@ -1,0 +1,481 @@
+/* Stiluri Generale */
+:root {
+    --primary-purple: #4B2C90;
+    --light-purple: #2A2343;
+    --text-color: #ffffff;
+    --button-color: #F534F9;
+    --pagination-active: #F534F9;
+    --footer-form-bg: #F534F9;
+    --input-placeholder-color: #f6f1f1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif; 
+    background-color: var(--primary-purple);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+    border: 1px solid #F534F9;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: var(--text-color);
+    background-color: var(--button-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, background-color 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    background-color: #BBBBBB;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: var(--primary-purple);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom: 1px solid #4B2C90;
+}
+
+.navbar .logo img {
+    height: 40px;
+    border-radius: 5px;
+}
+
+.navbar .nav-links ul {
+    display: flex;
+}
+
+.navbar .nav-links ul li {
+    margin: 0 15px;
+}
+
+.navbar .nav-links ul li a {
+    font-weight: bold;
+    transition: color 0.3s ease;
+    padding: 5px 0;
+}
+
+.navbar .nav-links ul li a:hover {
+    color: #F534F9;
+}
+
+.navbar .nav-icons {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .nav-icons a {
+    margin-left: 20px;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-icons a:hover {
+    color: #F534F9;
+}
+
+.hero-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 0;
+    background-color: var(--primary-purple);
+    position: relative;
+    overflow: hidden;
+    border-radius: 0px;
+    margin-top: 0px;
+    border: 1px solid #4B2C90;
+}
+
+.hero-image {
+    flex: 1.2; 
+    min-width: 300px;
+    display: flex;
+    justify-content: flex-start; /* Asigură că imaginea se aliniază la stânga în containerul său */
+    align-items: center;
+    padding: 0; 
+}
+
+.hero-image img {
+    width: 100%; /* Asigură că imaginea umple lățimea containerului său */
+    height: auto;
+    display: block;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px 4B2C90 (0, 0, 0, 0.1); 
+    object-fit: cover; 
+}
+
+.hero-content {
+    flex: 1; /* Conținutul va ocupa mai puțin spațiu decât imaginea */
+    min-width: 300px;
+    padding: 20px 5%; /* Adăugat padding pe dreapta pentru a distanța conținutul de margine */
+    text-align: left; /* Asigură că textul se aliniază la stânga în caseta sa */
+}
+
+.hero-content h1 {
+    font-family: 'Lilita One', cursive; 
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    text-shadow: none;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.hero-content .explore-btn {
+    background-color: var(--button-color);
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1.1em;
+}
+
+.hero-content .explore-btn:hover {
+    background-color: #4B2C90;
+}
+
+.social-icons {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-0%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.social-icons a {
+    font-size: 1.5em;
+    transition: color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.social-icons a:hover {
+    color: #F534F9;
+    transform: scale(1.1);
+}
+
+.products-section {
+    background-color: var(--primary-purple);
+    padding: 50px 5%;
+    text-align: center;
+    border-radius: 15px;
+    margin-top: 40px;
+    border: 1px solid #4B2C90;
+}
+
+.products-section h2 {
+    font-family: 'Lilita One', cursive; /* Fontul Lilita One aplicat aici */
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: none;
+}
+
+.products-section .subtitle {
+    font-size: 1.1em;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+/* DREPTUNGHIUL CU COLȚURI ROTUNJITE */
+.product-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    background-color: var(--light-purple);
+    border-radius: 30px;
+    padding: 40px 20px;
+    margin: 0 auto;
+    max-width: 1100px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0);
+    border: 1px solid #2A2343;
+}
+
+.product-card {
+    text-align: center;
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1 1 280px;
+    max-width: 300px;
+}
+
+/* FACE IMAGINEA ROTUNDĂ */
+.product-image-wrapper {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E0E0E0;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0);
+    border: 3px solid #2A2343;
+}
+
+.product-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.product-card .flavor-btn {
+    background-color: var(--button-color);
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1em;
+}
+
+.product-card .flavor-btn:hover {
+    background-color: #2A2343;
+}
+
+/* Paginație */
+.pagination {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.pagination a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #4B2C90;
+    color: var(--text-color);
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0);
+    border: 1px solid #ffffff;
+}
+
+.pagination a.active {
+    background-color: var(--pagination-active);
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #F534F9;
+}
+
+/* Subsol (Footer) */
+.footer {
+    background-color: var(--light-purple);
+    padding: 50px 5%;
+    border-top: 1px solid #27203e;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin-top: 40px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-logo-contact img {
+    height: 50px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.footer-logo-contact p {
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    color: #ffffff;
+}
+
+.footer h4 {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    text-shadow: none;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer ul li a {
+    font-size: 0.9em;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+    color: var(--text-color);
+}
+
+.footer-contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-contact-form input {
+    background-color: var(--light-purple);
+    border: 1px solid #ffffff;
+    padding: 12px 15px;
+    border-radius: 5px;
+    color: var(--text-color);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer-contact-form input::placeholder {
+    color: var(--text-color);
+    opacity: 0.7;
+}
+
+.footer-contact-form button {
+    background-color: var(--button-color);
+    padding: 12px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.footer-contact-form button:hover {
+    background-color: #2A2343;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #ffffff;
+    font-size: 0.8em;
+    color: #ffffff;
+}
+
+/* Ajustări Responsive */
+@media (max-width: 992px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        padding-left: 0;
+        margin-top: 40px;
+    }
+
+    .hero-image {
+        order: -1;
+    }
+
+    .social-icons {
+        position: static;
+        flex-direction: row;
+        margin-top: 30px;
+        transform: translateY(0);
+        width: 100%;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .social-icons a {
+        margin-bottom: 0;
+    }
+
+    .product-cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-menu, .footer-licence, .footer-social {
+        width: 100%;
+    }
+
+    .footer-menu ul, .footer-licence ul, .footer-social ul {
+        padding: 0;
+    }
+
+    .footer-contact-form {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links ul li {
+        margin: 5px 10px;
+    }
+
+    .nav-icons {
+        margin-top: 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar .nav-links ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .nav-links ul li {
+        margin: 5px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 2em;
+    }
+
+    .product-image-wrapper {
+        width: 150px;
+        height: 150px;
+    }
+}
